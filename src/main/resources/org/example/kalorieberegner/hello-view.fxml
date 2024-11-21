@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="601.0" style="-fx-background-color: #dde6f4;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.kalorieberegner.HelloController">
+   <center>
+      <VBox prefHeight="477.0" prefWidth="600.0" style="-fx-background-color: #dde6f4;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="600.0" text="Vælg aktivitet" textFill="#1453b9">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <ChoiceBox fx:id="activity" prefHeight="26.0" prefWidth="202.0">
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="600.0" text="Indtast din vægt" textFill="#1453b9">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="weight" prefHeight="35.0" prefWidth="200.0" promptText="Vægt i kg" style="-fx-background-radius: 120;">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="600.0" text="Indtast længden af din aktivitet" textFill="#1453b9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lengthOfActivity" prefHeight="35.0" prefWidth="200.0" promptText="Antal minutter" style="-fx-background-radius: 120;">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="result" alignment="CENTER" prefHeight="58.0" prefWidth="599.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="598.0" text="*Denne kalorie beregner bruger MET værdier og giver derfor kun et estimat.">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" blendMode="SRC_ATOP" mnemonicParsing="false" onAction="#clickOnCalculate" prefHeight="52.0" prefWidth="200.0" style="-fx-background-radius: 120; -fx-background-color: #90b1e4;" text="Beregn">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </Button>
+            <VBox prefHeight="118.0" prefWidth="610.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="69.0" prefWidth="600.0" text="For at bergeregne dit daglige energibehov tryk på knappen nedenfor" />
+                  <Button fx:id="dailyEnergy" mnemonicParsing="false" onAction="#clickOnDailyEnergy" prefHeight="29.0" prefWidth="200.0" style="-fx-background-color: #90b1e4; -fx-background-radius: 120;" text="Daglige energibehov">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label alignment="CENTER" prefHeight="92.0" prefWidth="636.0" text="Kalorieberegner*" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="47.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

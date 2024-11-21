@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="600.0" style="-fx-background-color: #dde6f4;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.kalorieberegner.DailyController">
+   <top>
+      <Label alignment="CENTER" prefHeight="54.0" prefWidth="600.0" text="Daglig energibehov beregner*" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox prefHeight="420.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="600.0" text="Vælg køn" textFill="#1453b9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="female" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="200.0" text="Kvinde">
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="male" mnemonicParsing="false" prefHeight="18.0" prefWidth="200.0" text="Mand">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+            </CheckBox>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="600.0" text="Indtast vægt" textFill="#1453b9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="weight" prefWidth="200.0" promptText="Kilogram" style="-fx-background-radius: 120;">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </TextField>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="600.0" text="Indtast højde" textFill="#1453b9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="height" promptText="Højde (meter)" style="-fx-background-radius: 120;">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin></TextField>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="600.0" text="Indtast alder" textFill="#1453b9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="age" promptText="Alder (hele år)" style="-fx-background-radius: 120;">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </TextField>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="600.0" text="Vælg aktivitets niveau" textFill="#1453b9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="activityLevel" prefWidth="200.0" style="-fx-background-color: #90b1e4;">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Label fx:id="result" alignment="CENTER" prefHeight="42.0" prefWidth="600.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Button fx:id="calculate" mnemonicParsing="false" onAction="#onCalculate" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #90b1e4; -fx-background-radius: 120;" text="Beregn">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </Button>
+            <Label alignment="CENTER" prefHeight="33.0" prefWidth="600.0" text="*Denne beregner er et estimat og mange flere faktorer kan gøre at dit daglige energibehov er højrer eller lavere" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
